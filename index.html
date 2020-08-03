@@ -50,8 +50,8 @@
             </div>
         </div>
         <div  class="notify-section">
-            <p id="resultShow" id="noMatch" class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p id="resultShow" id="match" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p  id="noMatch" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p  id="match" class="notify">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
     <script>
@@ -65,28 +65,26 @@
         }
 
 
-         
-        // document.getElementById('submit').addEventListener('click', function(){
-        //     var screen1 = document.getElementById('screen1').value;
-        //     var screen2 = document.getElementById('screen2').value;
+        
+        document.getElementById('submit').addEventListener('click', function(){
+            var screen1 = document.getElementById('screen1').value;
+            var screen2 = document.getElementById('screen2').value;
             
-        //     if(screen1 == screen2){
-        //         document.getElementById('match').style.display = "block";
-               
-        //     }
-        // })
+            if(screen1 == screen2){
+                document.getElementById('match').style.display = "block";
+                document.getElementById('noMatch').style.display = "none";
+            }
+           else{
+                document.getElementById('noMatch').style.display = "block";
+                document.getElementById('match').style.display = "none";
+           }     
+           
+            
+        })
        
            
        
-        // let screen2 = document.getElementById('screen2');
-        // buttons = document.querySelectorAll('button');
-        // let screenValue = '';
-        // for(item of buttons){
-        //     item.addEventListener('click', (e)=>{
-        //         buttonText = e.target.innerText;
-        //         console.log('btn ' , buttonText);
-        //     })
-        // }
+        
     </script>
 </body>
 </html>
